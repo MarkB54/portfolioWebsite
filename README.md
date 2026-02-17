@@ -30,11 +30,10 @@ Content lives in `src/content/` and can be edited directly or through the Keysta
 
 - **Hero** - Name, title, avatar, social links (`src/content/hero/index.yaml`)
 - **About** - Bio and photo (`src/content/about/`)
+- **Experience** - Employment history (`src/content/work/`)
 - **Projects** - Portfolio items (`src/content/projects/`)
-- **Work** - Employment history (`src/content/work/`)
 - **Education** - Academic background (`src/content/education/`)
-- **Hackathons** - Events and competitions (`src/content/hackathons/`)
-- **Blog** - Articles and posts (`src/content/blog/`)
+
 
 ## Tech Stack
 
