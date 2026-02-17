@@ -1,0 +1,75 @@
+---
+import { getEntry } from "astro:content";
+import ThemeToggle from "./ThemeToggle.astro";
+import ThemeSelector from "./ThemeSelector.astro";
+
+const heroEntry = await getEntry("hero", "index");
+const generalEntry = await getEntry("general", "index");
+const general = generalEntry.data;
+
+const navItems: { label: string; href: string }[] = [];
+if (general.showAboutSection) navItems.push({ label: "About", href: "/#about" });
+if (general.showWorkSection) navItems.push({ label: "Experience", href: "/#work" });
+if (general.showProjectsSection) navItems.push({ label: "Projects", href: "/#projects" });
+if (general.showEducationSection) navItems.push({ label: "Education", href: "/#education" });
+---
+
+<header class="navbar fixed top-0 left-0 right-0 z-40 bg-base-100/80 backdrop-blur-md border-b border-base-content/5 min-h-16">
+  <div class="navbar-start">
+    <a href="/#top" class="btn btn-ghost text-xl font-semibold px-4">
+      {heroEntry.data.name}
+    </a>
+  </div>
+
+  <div class="navbar-center hidden md:flex">
+    <ul class="menu menu-horizontal gap-1 px-1">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="btn btn-ghost btn-md text-base text-base-content/80 hover:text-base-content hover:bg-base-200/50 px-3"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="navbar-end gap-2 pr-2">
+    <div class="flex items-center">
+      {general.enableThemeSelector ? <ThemeSelector /> : <ThemeToggle />}
+    </div>
+    <div class="dropdown dropdown-end md:hidden">
+      <label tabindex="0" class="btn btn-ghost btn-square" aria-label="Open menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="6" x2="20" y2="6"></line>
+          <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+      </label>
+      <ul
+        tabindex="0"
+        class="dropdown-content menu p-2 shadow-lg bg-base-100 rounded-box mt-2 w-48 border border-base-content/5"
+      >
+        {navItems.map((item) => (
+          <li>
+            <a href={item.href} class="rounded-lg">
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</header>

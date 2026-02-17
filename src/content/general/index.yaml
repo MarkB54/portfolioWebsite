@@ -1,0 +1,22 @@
+enableThemeSelector: true
+extraLinksEnabled: true
+extraLinks:
+  - link: https://github.com/MarkB54
+    icon: CodeXml
+    label: GitHub
+    displayOn: both
+  - link: https://linkedin.com/in/mark-bastoulis
+    icon: Briefcase
+    label: LinkedIn
+    displayOn: both
+  - link: mailto:mbastoulis@gmail.com
+    icon: Mail
+    label: Email
+    displayOn: both
+showAboutSection: true
+showProjectsSection: true
+showBlogSection: false
+showWorkSection: true
+showEducationSection: true
+showHackathonsSection: false
+showContactSection: false

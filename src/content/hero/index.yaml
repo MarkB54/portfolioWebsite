@@ -1,0 +1,18 @@
+name: Mark Bastoulis
+title: Software Developer & IT Professional
+description: >-
+  Graduate student at UNSW completing a Master of Information Technology. 
+  Passionate about full-stack development, building scalable applications, 
+  and mentoring junior developers.
+avatar: '@assets/hero/avatar.svg'
+location: Sydney, Australia
+socialLinks:
+  - url: mailto:mbastoulis@gmail.com
+    icon: Email
+    label: Email
+  - url: https://github.com/MarkB54
+    icon: GitHub
+    label: GitHub
+  - url: https://linkedin.com/in/mark-bastoulis
+    icon: LinkedIn
+    label: LinkedIn

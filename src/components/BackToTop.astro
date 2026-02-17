@@ -1,0 +1,48 @@
+---
+---
+<button
+  id="back-to-top"
+  type="button"
+  class="btn btn-circle btn-primary fixed bottom-20 left-4 z-50 opacity-0 pointer-events-none transition-all duration-300 shadow-lg md:bottom-8 md:left-8"
+  aria-label="Back to top"
+  style="transition: opacity 0.3s, transform 0.3s;"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="m18 15-6-6-6 6" />
+  </svg>
+</button>
+
+<script is:inline>
+  (function() {
+    function setup() {
+      var btn = document.getElementById("back-to-top");
+      if (!btn) return;
+      function toggle() {
+        if (window.scrollY > 400) {
+          btn.classList.remove("opacity-0", "pointer-events-none");
+        } else {
+          btn.classList.add("opacity-0", "pointer-events-none");
+        }
+      }
+      window.addEventListener("scroll", toggle, { passive: true });
+      toggle();
+      btn.onclick = function() { window.scrollTo({ top: 0, behavior: "smooth" }); };
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setup);
+    } else {
+      setup();
+    }
+    document.addEventListener("astro:page-load", setup);
+  })();
+</script>
