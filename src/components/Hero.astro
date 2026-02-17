@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
 import { getIcon } from "../utils/iconMapper";
 
 interface Props {
@@ -8,7 +6,7 @@ interface Props {
     name: string;
     title: string;
     description: string;
-    avatar: ImageMetadata | string;
+
     location?: string;
     socialLinks: Array<{
       url: string;
@@ -22,29 +20,8 @@ const { hero } = Astro.props;
 ---
 
 <section id="top" class="hero min-h-[80vh] md:min-h-screen py-12 px-4">
-  <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl gap-8 lg:gap-12">
-    <div class="hover-3d">
-      <!-- content -->
-      <figure class="max-w-100 w-48 lg:w-64 mask mask-squircle">
-        {
-          typeof hero.avatar === "string" ? (
-            <img src={hero.avatar} alt={hero.name} />
-          ) : (
-            <Image src={hero.avatar} alt={hero.name} />
-          )
-        }
-      </figure>
-      <!-- 8 empty divs needed for the 3D effect -->
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="max-w-2xl text-center lg:text-left">
+  <div class="hero-content flex-col max-w-7xl gap-8 lg:gap-12">
+    <div class="max-w-2xl text-center">
       <h1 class="text-4xl lg:text-5xl font-bold mb-4">
         Hi, I'm {hero.name}
       </h1>
@@ -60,7 +37,7 @@ const { hero } = Astro.props;
         {hero.description}
       </p>
       <div
-        class="flex flex-wrap justify-center gap-3 lg:justify-start"
+        class="flex flex-wrap justify-center gap-3"
       >
         {
           hero.socialLinks.map((link) => {
