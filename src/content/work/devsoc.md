@@ -9,8 +9,7 @@ skills:
   - JavaScript
   - React
   - Express
-  - Supabase
+  - OpenAI API
 ---
-- Led training and development of 3 team members as Training Lead for UNSW DevSoc.
-- Architected and supervised development of full-stack web application utilising React frontend, Express.js backend, Supabase database, and Google Places API integration.
+- Led training for 3 junior developers, guiding them through the end-to-end development of a full-stack AI-powered chat application featuring real-time messaging, OpenAI integration, and user authentication.
 - Mentored junior developers through code reviews and pair programming sessions, ensuring adherence to software engineering principles and fostering collaborative development practices within the team.

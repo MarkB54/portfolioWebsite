@@ -3,8 +3,8 @@ title: About Me
 photo: '@assets/about/photo.svg'
 link: https://linkedin.com/in/mark-bastoulis
 ---
-I'm a graduate student at UNSW completing a **Master of Information Technology** with a WAM of 94.125. My background spans law and business — I hold a Bachelor of Business and Bachelor of Laws from UTS — and I've transitioned into software development with a focus on full-stack web applications.
+Hi there!
 
-Currently, I lead training at UNSW DevSoc, where I architect full-stack applications, mentor junior developers, and foster collaborative development practices. I've also served as Technical Director at QuantSoc and worked as a Senior Consultant at Hall & Partners, where I developed NLP tools and drove process automation.
+Before transitioning into tech, I worked as a consultant where I discovered my passion for solving problems through code. What started as automating spreadsheets and building NLP tools for qualitative analysis turned into a full career pivot - I realised the power of software to transform manual work into scalable solutions, and I wanted to build those systems full-time.
 
-My technical stack includes **TypeScript**, **React**, **Node.js**, **Express**, and **Docker/Kubernetes**. I enjoy building scalable systems, writing clean code, and helping others grow as developers.
+These days, I'm focused on backend architecture and distributed systems - building things like peer-to-peer networks that coordinate file transfers across protocols, or serverless APIs that need to handle concurrent users while keeping costs low. I have also mentored developers at UNSW DevSoc, helping them dip their toes into the world of software development.
