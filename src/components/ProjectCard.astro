@@ -1,6 +1,6 @@
 ---
 import SkillBadge from "./SkillBadge.astro";
-import { ExternalLink, Eye } from "@lucide/astro";
+import { ExternalLink } from "@lucide/astro";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -58,7 +58,7 @@ function formatPeriod(startDate: Date, endDate?: Date) {
             href={project.data.sourceLink}
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-sm btn-soft gap-1"
+            class="btn btn-sm btn-outline gap-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,20 +71,6 @@ function formatPeriod(startDate: Date, endDate?: Date) {
             </svg>
             Source
           </a>
-        )
-      }
-      {
-        project.data.sourceLink && (
-          <div class="tooltip" data-tip="View on GitHub">
-            <a
-              href={project.data.sourceLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-sm btn-primary"
-            >
-              <Eye class="size-4" />
-            </a>
-          </div>
         )
       }
     </div>
