@@ -123,17 +123,6 @@ const entriesWithContent = await Promise.all(
                     class={`font-mono text-sm text-base-content/70 block italic ${index % 2 === 0 ? "text-end" : ""}`}
                   >
                     {formatPeriod(entry.data.startDate, entry.data.endDate)}
-                    {calculateDuration(
-                      entry.data.startDate,
-                      entry.data.endDate,
-                    ) && (
-                      <span class="ml-1 text-base-content/50">
-                        {calculateDuration(
-                          entry.data.startDate,
-                          entry.data.endDate,
-                        )}
-                      </span>
-                    )}
                   </time>
                   <div class="card bg-base-100 shadow-xl mt-2">
                     <div class="card-body">
@@ -208,17 +197,6 @@ const entriesWithContent = await Promise.all(
                     )}
                     <p class="text-sm text-base-content/70 font-mono italic mt-1">
                       {formatPeriod(entry.data.startDate, entry.data.endDate)}
-                      {calculateDuration(
-                        entry.data.startDate,
-                        entry.data.endDate,
-                      ) && (
-                        <span class="ml-1 text-base-content/50">
-                          {calculateDuration(
-                            entry.data.startDate,
-                            entry.data.endDate,
-                          )}
-                        </span>
-                      )}
                     </p>
                   </div>
                 </div>
@@ -303,17 +281,6 @@ const entriesWithContent = await Promise.all(
                       !entry.data.hideDates && (
                         <div class="text-sm text-base-content/70 font-mono shrink-0 sm:whitespace-nowrap">
                           {formatPeriod(entry.data.startDate, entry.data.endDate)}
-                          {calculateDuration(
-                            entry.data.startDate,
-                            entry.data.endDate,
-                          ) && (
-                            <span class="ml-1 text-base-content/50">
-                              {calculateDuration(
-                                entry.data.startDate,
-                                entry.data.endDate,
-                              )}
-                            </span>
-                          )}
                         </div>
                       )
                     }
