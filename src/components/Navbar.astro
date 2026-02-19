@@ -17,7 +17,7 @@ if (general.showEducationSection) navItems.push({ label: "Education", href: "/#e
 <header class="navbar fixed top-0 left-0 right-0 z-40 bg-base-100/80 backdrop-blur-md border-b border-base-content/5 min-h-16">
   <div class="navbar-start">
     <a href="/#top" class="btn btn-ghost text-xl font-semibold px-4">
-      {heroEntry.data.name}
+      {heroEntry.data.name.split(" ").map((n: string) => n[0]).join("")}
     </a>
   </div>
 
